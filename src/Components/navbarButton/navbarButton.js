@@ -1,7 +1,8 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './navbarButton.css'
 
-
-const navbarButton = ({ textButton, icon }) => {
+const NavbarButton = ({ textButton, icon }) => {
 
     return (
 
@@ -14,4 +15,4 @@ const navbarButton = ({ textButton, icon }) => {
 
 }
 
-export default navbarButton;
+export default NavbarButton;
