@@ -1,10 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const CartWidget = (icon) => {
+const CartWidget = ({ icon }) => {
 
-    <FontAwesomeIcon icon={icon} />
+    return (
 
+        <FontAwesomeIcon icon={icon} />
+
+    )
 
 }
 

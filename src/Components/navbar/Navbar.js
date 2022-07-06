@@ -2,11 +2,12 @@ import './Navbar.css';
 import NavbarButton from '../navbarButton/navbarButton';
 import CartWidget from '../cartWidget/CartWidget';
 
-
+//ICONS
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
