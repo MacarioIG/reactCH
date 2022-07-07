@@ -1,0 +1,32 @@
+.counter {
+
+    display: flex;
+    width: 14vh;
+    height: auto;
+    background-color: aliceblue;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 1vh;
+
+}
+
+.counter__nameItem {
+
+    font-size: 1.2vh;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+.counter__container {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+
+}
