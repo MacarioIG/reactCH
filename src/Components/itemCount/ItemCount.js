@@ -5,7 +5,7 @@ import './ItemCount.css'
 import { useState } from "react"
 
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
 
 
 
@@ -15,19 +15,13 @@ const ItemCount = ({ stock, initial }) => {
 
     const incrementar = () => {
 
-        contador < stock ? setContador(contador + 1) : "No hay mas stock"
+        contador < stock ? setContador(contador + 1) : alert("No hay mas stock")
 
     }
 
     const decrementar = () => {
 
-        contador < 1 ? contador = 1 : setContador(initial - 1)
-
-    }
-
-    const onAdd = () => {
-
-        contador >= 1 ? "Producto agregado!" : ""
+        contador > 1 && setContador(contador - 1)
 
     }
 
@@ -38,7 +32,7 @@ const ItemCount = ({ stock, initial }) => {
             <p className="counter__nameItem">MOTO G22 XT-2231-5 CELESTE</p>
             <div className="counter__container">
                 <FontAwesomeIcon icon={faPlus} onClick={incrementar} />
-                <p>{initial}</p>
+                <p>{contador}</p>
                 <FontAwesomeIcon icon={faMinus} onClick={decrementar} />
             </div>
             {

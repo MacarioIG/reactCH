@@ -7,15 +7,15 @@ import ItemCount from './Components/itemCount/ItemCount';
 
 
 
+
 function App() {
 
-
-
+  const onAdd = () => alert('producto agregado')
 
   return (
     <>
       <Navbar />
-      <ItemCount stock={10} initial={1} />
+      <ItemCount stock={10} initial={1} onAdd={onAdd} />
       <ItemListContainer greeting="The list of items will be here :3" />
     </>
   );
