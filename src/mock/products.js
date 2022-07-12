@@ -1,0 +1,31 @@
+const products = [
+
+    {
+        id:1,
+        title:"cellphone1",
+        image:'./images/products/phone1.png',
+        description:"s, when an unknown printer took a galley of type and scrambled it to make a type specime",
+        stock: 2 ,
+        price: 30000
+    },
+    {
+        id:2,
+        title:"cellphone2",
+        image:'./images/products/phone2.png',
+        description:"s, when an unknown printer took a galley of type and scrambled e",
+        stock:3 ,
+        price: 35000
+    },
+    {
+        id:3,
+        title:"cellphone3",
+        image:'./images/products/phone3.png',
+        description:"s, when an unknown printer it to make a type specime",
+        stock: 4,
+        price: 40000
+    }
+
+
+]
+
+export default products

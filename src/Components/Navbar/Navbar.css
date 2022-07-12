@@ -21,19 +21,3 @@
     justify-content: space-between;
     align-items: center;
 }
-
-.Nav__container__item {
-
-    display: flex;
-    align-items: center;
-
-}
-
-.Nav__container__item__p {
-
-    font-size: 2vh;
-    color: white;
-    padding: 0;
-    margin: 0 1vh 0 1vh;
-
-}
