@@ -28,3 +28,25 @@
 
     height: auto;
 }
+
+.counter__button {
+
+    background-color: rgb(255, 51, 0)
+    ;
+    color: white;
+    font-size: 2.2vh;
+    box-sizing: border-box;
+    padding: 1vh;
+    border-radius: 3vh;
+
+}
+
+
+.counter__button:hover {
+
+    color:whitesmoke;
+    background-color: #ff471a
+    ;
+    transition: ease 0.5s;
+
+}
