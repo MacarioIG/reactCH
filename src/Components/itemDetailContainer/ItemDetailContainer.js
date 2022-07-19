@@ -2,9 +2,11 @@ import ItemDetail from "./itemDetail";
 import { useEffect ,useState} from "react";
 import products from "../../mock/products";
 import './itemDetailContainer.css'
-
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
+
+    const {id} = useParams();
     
     const [item,setItems] = useState({})
 
@@ -14,7 +16,7 @@ const ItemDetailContainer = () => {
 
             setTimeout(()=> {
                 
-                    res(products.find(item => item.id === 1))
+                    res(products.find(item => item.id == id))
                 },1000)
 
             })
@@ -29,7 +31,7 @@ const ItemDetailContainer = () => {
                 
             })
 
-    }, []) 
+    }, [id]) 
 
 
     return (

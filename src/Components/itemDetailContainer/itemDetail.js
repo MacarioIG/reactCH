@@ -9,19 +9,20 @@ const ItemDetail = ({item}) => {
   /*   const descMap = descArray.map((item) => (
         <li>{item}</li>
     )) */
+
+    const {imageDetail,title,price} = item
     
     const onAdd = () => alert('producto agregado')
     
     return (
          <div className="containerItem">
-            <img src = {item.imageDetail} className="image" alt = ""/>
+            <img src = {imageDetail} className="image" alt = ""/>
             <div className="containerItem__details">
-                <h3>{item.title}</h3>
+                <h3>{title}</h3>
                 <div className="">
-                <ul>{descArray}</ul>
+                    <ul>{descArray}</ul>
                 </div> 
-                <span>{item.price}$</span>
-                <ItemCount stock={10} initial={1} onAdd={onAdd} />
+                <ItemCount stock={10} initial={1} price={price}onAdd={onAdd} />
             </div>
         </div>
 

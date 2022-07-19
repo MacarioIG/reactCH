@@ -5,7 +5,7 @@ import './ItemCount.css'
 import { useState } from "react"
 
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, price}) => {
 
 
 
@@ -34,6 +34,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <p>{contador}</p>
                 <div className="counter__container__icon"><FontAwesomeIcon icon={faMinus} onClick={decrementar} /></div>
             </div>
+            <span>TOTAL:${contador*price}</span>
             <button className="counter__button"onClick={onAdd} >Add to cart!</button>
         </div>
 
