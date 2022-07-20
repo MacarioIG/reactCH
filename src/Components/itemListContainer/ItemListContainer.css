@@ -1,9 +1,13 @@
 .itemsContainer {
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     background-color: black;
     color: white;
-    height: 100vh;
+    height: auto;
+    padding: 3vh;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+
 }

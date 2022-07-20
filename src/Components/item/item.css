@@ -2,19 +2,16 @@
     background-color: rgb(4, 16, 20);
     display: flex;
     flex-direction: column;
-    width: 15%;
-    height: 70vh;
+    width: 36vh;
+    height: 65vh;
     font-family: 'Montserrat', sans-serif;
-    
+    margin: 2vh;
     border-radius: 10px;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding: 2vh;
-    box-shadow: 1px 2px 26px 6px rgba(110, 104, 104, 0.4);
-    -webkit-box-shadow: 1px 2px 26px 6px rgba(110, 104, 104, 0.4);
-    -moz-box-shadow: 1px 2px 26px 6px rgba(110, 104, 104, 0.4)
-  
+   
 
 }
 
@@ -38,6 +35,8 @@
     box-sizing: border-box;
     padding: 1vh;
     border-radius: 3vh;
+    width: 30vh;
+    border: none;
 
 }
 
@@ -49,4 +48,15 @@
     ;
     transition: ease 0.5s;
 
+}
+
+.image {
+
+    height: 30%;
+
+}
+
+.link {
+
+    width: 90%;
 }

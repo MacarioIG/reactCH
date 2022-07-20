@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
     
     return (
          <div className="containerItem">
-            <img src = {imageDetail} className="image" alt = ""/>
+            <img src = {imageDetail} className="imageDetail" alt = ""/>
             <div className="containerItem__details">
                 <h3>{title}</h3>
                 <div className="">

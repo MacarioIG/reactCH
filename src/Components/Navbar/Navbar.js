@@ -18,10 +18,10 @@ function Navbar() {
         <div className='Nav'>
             <NavLink className="img"to = "/"><img src='/images/logoDarkMode.png' alt='' /></NavLink>
             <div className='Nav__container'>
-                <NavLink to="/categorys/phones"><NavbarButton textButton="SmartPhones" icon={faMobileScreenButton} /></NavLink>
-                <NavLink to="/categorys/tv"><NavbarButton textButton="Smart Tv's" icon={faTv} /></NavLink>
-                <NavbarButton textButton="My account" icon={faUser} />
-                <CartWidget icon={faCartShopping} />
+                <NavLink to="/categorys/phones" className="links"><NavbarButton textButton="SmartPhones" icon={faMobileScreenButton} /></NavLink>
+                <NavLink to="/categorys/tv"className="links" ><NavbarButton textButton="Smart Tv's" icon={faTv} /></NavLink>
+                <NavbarButton className="links" textButton="My account" icon={faUser} />
+                <CartWidget  icon={faCartShopping} />
             </div>
         </div>
 

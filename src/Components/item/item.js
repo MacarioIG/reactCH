@@ -11,13 +11,11 @@ const Item = ({item}) => {
 
         <div className="item" >
 
-            <img src = {imageList} width = "100px" alt = ""/>
+            <img src = {imageList} className="image" alt = ""/>
             <h3>{title}</h3>
             <span>{price}$</span>
-            <Link to={`/item/${id}`}><button className='counter__button'>Buy Now!</button></Link>
+            <Link className="link" to={`/item/${id}`}><button className='counter__button'>Buy Now!</button></Link>
             
-            
-
         </div>
 
     )

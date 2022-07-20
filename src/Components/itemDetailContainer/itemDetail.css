@@ -8,18 +8,26 @@
 
 }
 
+h3 {
+
+    font-size: 3vh;
+
+}
+
 .containerItem__details {
-    margin-left: 10vh;
+    border-left: 1px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    height: 70vh;
     padding: 3vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.image {
-
-    width: 50vh;
+.imageDetail {
+    padding:3vh;
+    height: 70vh;
 }
 
 .container__details__prop {
