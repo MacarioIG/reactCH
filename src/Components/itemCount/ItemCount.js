@@ -35,7 +35,7 @@ const ItemCount = ({ stock, initial, onAdd, price}) => {
                 <div className="counter__container__icon"><FontAwesomeIcon icon={faMinus} onClick={decrementar} /></div>
             </div>
             <span >TOTAL: ${contador*price}</span>
-            <button className="counter__button"onClick={onAdd} >Add to cart!</button>
+            <button className="counter__button" onClick={()=> onAdd(contador)} >Add to cart!</button>
         </div>
 
     )

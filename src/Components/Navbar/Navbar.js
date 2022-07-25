@@ -21,7 +21,7 @@ function Navbar() {
                 <NavLink to="/categorys/phones" className="links"><NavbarButton textButton="SmartPhones" icon={faMobileScreenButton} /></NavLink>
                 <NavLink to="/categorys/tv"className="links" ><NavbarButton textButton="Smart Tv's" icon={faTv} /></NavLink>
                 <NavbarButton className="links" textButton="My account" icon={faUser} />
-                <CartWidget  icon={faCartShopping} />
+                <NavLink to = "/cart" className="links"> <CartWidget  icon={faCartShopping} /></NavLink>
             </div>
         </div>
 
