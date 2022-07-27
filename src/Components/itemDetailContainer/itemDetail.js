@@ -1,13 +1,13 @@
 import ItemCount from "../itemCount/ItemCount"
 import './itemDetail.css'
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
-
+import { CartContext } from "../../context/cartContext" //Llamo el contexto para utilizar la función addToCart
 
 const ItemDetail = ({item}) => {
  
     const descArray = item.description
-    console.log(descArray)  
+    
   /*   const descMap = descArray.map((item) => (
         <li>{item}</li>
     )) */
@@ -16,11 +16,13 @@ const ItemDetail = ({item}) => {
     const {imageDetail,title,price} = item
 
     const  [quantity, setQuantity] = useState(0)
+
+    const {addToCart} = useContext(CartContext) // llamo a la función con el hook useContext
     
     const onAdd = (cantidad) => { // recibe la cantidad seleccionada del itemCount como parametro
 
         setQuantity(cantidad) // dicha cantidad es almacenada en quantity
-        alert(`agregaste ${cantidad} de productos!`)
+        addToCart(item,cantidad)
 
     }
     
