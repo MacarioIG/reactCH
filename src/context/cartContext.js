@@ -25,20 +25,20 @@ const Provider = (props) => {
         totalCart()
     },[cart])
 
-    const addToCart = (item,cantidad) => {
-
-    
+    const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
-
-            alert("Ya esta en el carrito")
-
-        }else {
-
-            setCart([...cart,{...item,cantidad}]) // ...cart evita que se agrege un array vacio (generado por el valor inical de useSate), ...Item permite incluir "cantidad" como una nueva propiedad del item
-
+            
+            cart.map((product) => {
+                if(product.id === item.id){
+                    
+                    product.stock = cantidad
+                    setCart(cart)
+                }
+            })
+            
+        } else {
+            setCart([...cart, { ...item, cantidad }]);
         }
-        
-
     }
 
     const isInCart = (id) => {

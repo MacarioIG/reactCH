@@ -20,7 +20,6 @@ const Cart = () => {
 
     }
 
-    console.log(sum)
     
     return(
         <div className="cart"> 
@@ -34,6 +33,7 @@ const Cart = () => {
                         <div>
                             <h3>{product.title}</h3>
                             <p>${product.price}</p>
+                            <p>{product.stock}</p>
                         </div>
                     </div>
                     <FontAwesomeIcon  onClick = {()=>deleteOne(product.id)} className= "cart__icon"icon={faXmark} />
