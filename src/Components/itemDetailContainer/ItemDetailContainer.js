@@ -3,6 +3,7 @@ import { useEffect ,useState} from "react";
 import products from "../../mock/products";
 import './itemDetailContainer.css'
 import { useParams } from "react-router-dom";
+import {getFirestore, doc, getDoc} from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
 
@@ -12,26 +13,12 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-        const data = new Promise ((res, rej) => {
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb,'items',id)
+        getDoc(queryDoc)
+        .then( res => setItems({id: res.id, ...res.data()}))
 
-            setTimeout(()=> {
-                
-                    res(products.find(item => item.id == id))
-                },1000)
-
-            })
-            
-            data.then ( (data) => {
-                
-                setItems(data)
-            })
-            data.catch ( (error) => {
-
-                console.log(error)
-                
-            })
-
-    }, [id]) 
+    }, []) 
 
 
     return (
