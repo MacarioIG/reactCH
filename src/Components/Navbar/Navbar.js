@@ -4,9 +4,7 @@ import CartWidget from '../cartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
 
 //ICONS
-import { faCartShopping, faTv } from '@fortawesome/free-solid-svg-icons'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faTv, faMobileScreenButton} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -20,7 +18,6 @@ function Navbar() {
             <div className='Nav__container'>
                 <NavLink to="/categorys/phones" className="links"><NavbarButton textButton="SmartPhones" icon={faMobileScreenButton} /></NavLink>
                 <NavLink to="/categorys/tv"className="links" ><NavbarButton textButton="Smart Tv's" icon={faTv} /></NavLink>
-                <NavbarButton className="links" textButton="My account" icon={faUser} />
                 <NavLink to = "/cart" className="links"> <CartWidget  icon={faCartShopping} /></NavLink>
             </div>
         </div>

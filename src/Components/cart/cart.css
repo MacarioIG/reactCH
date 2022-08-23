@@ -9,6 +9,44 @@
 
 }
 
+a {
+    text-decoration: none;
+    
+}
+
+.link {
+
+    font-size: 4vh;
+    text-decoration: none;
+    color: grey;
+
+}
+
+.link:hover {
+
+    color: blanchedalmond;
+    transition: 0.5s ease-in;
+
+}
+
+
+
+.cart__container {
+
+    color: white;
+    background-color: black;
+    height: 75vh;
+
+}
+
+.cart__container h3 {
+
+    padding-top:3vh;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
 .cart__item{
     padding: 2vh;
     box-sizing: border-box;

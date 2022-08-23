@@ -7,16 +7,10 @@ import Cart from './Components/cart/cart';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Provider from './context/cartContext';
 import Form from './Components/form/form';
-
-
-
-
+import Footer from './Components/footer/footer';
 
 
 function App() {
-
-
-  
 
   return (
   <Provider>
@@ -29,6 +23,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/form' element={<Form/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </Provider>
   );

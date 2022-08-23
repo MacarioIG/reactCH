@@ -1,5 +1,26 @@
+form {
+    height: 75vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}   
 .container-form {
 
-    width: 100vh;
-    background-color: red;
+    
+    justify-content: space-evenly;
+    width: 40%;
+    align-items: center;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+.container-form input {
+
+    width: 50%;
 }

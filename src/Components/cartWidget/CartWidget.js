@@ -12,7 +12,7 @@ const CartWidget = ({ icon }) => {
         <>  
             {
                 cart.length === 0 ? <FontAwesomeIcon icon={icon} /> 
-                                  : <div className='container'>
+                                  : <div className='containerWidget'>
                                         <FontAwesomeIcon icon={icon} />
                                         <p>{cart.length}</p>
                                     </div>

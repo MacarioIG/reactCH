@@ -1,10 +1,10 @@
-import { useContext } from 'react'
 import './cart.css'
+import { useContext } from 'react'
 import {CartContext} from '../../context/cartContext'
 import { Link } from 'react-router-dom'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { collection, getFirestore,addDoc } from 'firebase/firestore'
+
 
 
 
@@ -14,29 +14,12 @@ const Cart = () => {
     
     const {cart ,deletAll,deleteOne,sum} = useContext(CartContext)
 
-    const order = {
-
-        buyer: {
-            name:'Macario',
-            email:'Igarzabal@gmail.com',
-            phone: '2983505317'
-        },
-        items:cart.map(product => ({id:product.id,title:product.title,price:product.price,quantity:product.cantidad})),
-        total:sum
-
-    }
-
-    const handleClick = () => {
-
-        const db = getFirestore()
-        const orderCollection = collection(db,'orders');
-        addDoc(orderCollection,order)
-        .then(({id}) => console.log(id))
-    }
     
     if(cart.length === 0) {
 
-        return<h3>No sumaste ningún item al carrito, volver al <Link to='/'>Inicio</Link></h3>
+        return <div className='cart__container'>
+            <h3>No sumaste ningún item al carrito, volver al <Link to='/'><span className='link'>Inicio</span></Link></h3>
+            </div>
 
     }
 
@@ -63,7 +46,7 @@ const Cart = () => {
         }
 
         <button onClick={deletAll}>Eliminar productos</button>
-        <button onClick={handleClick}>
+        <button >
             <Link to="/form">Emitir compra</Link></button>
         <h3>Total:${sum} </h3>
         </div>

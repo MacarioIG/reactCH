@@ -24,12 +24,14 @@ const ItemListContainer = () => {
            
            const queryFilter = query(queryCollection, where('category', '==', category))
            getDocs (queryFilter)
-           .then(res => setItems(res.docs.map(product => ( {id: product.id, ...product.data() }))))
+           .then(res => {setItems(res.docs.map(product => ( {id: product.id, ...product.data() })))
+                         setLoading(false)})
 
        } else {
 
         getDocs(queryCollection)
-            .then(res => setItems(res.docs.map(product => ( {id: product.id, ...product.data() }))))
+            .then(res => {setItems(res.docs.map(product => ( {id: product.id, ...product.data() })))
+                          setLoading(false)})
 
        }
 
@@ -40,10 +42,11 @@ const ItemListContainer = () => {
 
     return (
         <>  
-                       <div className="itemsContainer">
-                            <ItemList className="itemsContainer__items" data = {items}></ItemList>
-                        </div>
-             
+        
+            <div className="itemsContainer">
+                {loading ? (<Loader/>) : (
+                <ItemList className="itemsContainer__items" data = {items}></ItemList>) }
+            </div>
         </>
     )
 
