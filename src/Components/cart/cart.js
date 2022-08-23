@@ -11,8 +11,8 @@ import { collection, getFirestore,addDoc } from 'firebase/firestore'
 const Cart = () => {
 
     
-    const valores = useContext(CartContext)
-    const {deletAll,deleteOne,sum} = useContext(CartContext)
+    
+    const {cart ,deletAll,deleteOne,sum} = useContext(CartContext)
 
     const order = {
 
@@ -21,7 +21,7 @@ const Cart = () => {
             email:'Igarzabal@gmail.com',
             phone: '2983505317'
         },
-        items:valores.cart.map(product => ({id:product.id,title:product.title,price:product.price,quantity:product.stock})),
+        items:cart.map(product => ({id:product.id,title:product.title,price:product.price,quantity:product.cantidad})),
         total:sum
 
     }
@@ -34,7 +34,7 @@ const Cart = () => {
         .then(({id}) => console.log(id))
     }
     
-    if(valores.cart.length === 0) {
+    if(cart.length === 0) {
 
         return<h3>No sumaste ningún item al carrito, volver al <Link to='/'>Inicio</Link></h3>
 
@@ -44,8 +44,9 @@ const Cart = () => {
     return(
         <div className="cart"> 
         
-        {
-            valores.cart.map((product) => (
+        {   
+            
+            cart.map((product) => (
 
                 <div key={product.id} className="cart__item">
                     <div className='cart__item__detail'>
@@ -53,7 +54,7 @@ const Cart = () => {
                         <div>
                             <h3>{product.title}</h3>
                             <p>${product.price}</p>
-                            <p>{product.stock}</p>
+                            <p>Quantity: {product.cantidad}</p>
                         </div>
                     </div>
                     <FontAwesomeIcon  onClick = {()=>deleteOne(product.id)} className= "cart__icon"icon={faXmark} />
@@ -62,8 +63,9 @@ const Cart = () => {
         }
 
         <button onClick={deletAll}>Eliminar productos</button>
-        <button onClick={handleClick}>Emitir compra</button>
-        <h3>Total:{sum} </h3>
+        <button onClick={handleClick}>
+            <Link to="/form">Emitir compra</Link></button>
+        <h3>Total:${sum} </h3>
         </div>
 
     )

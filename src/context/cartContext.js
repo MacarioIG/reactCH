@@ -28,16 +28,18 @@ const Provider = (props) => {
     const addToCart = (item, cantidad) => {
         if (isInCart(item.id)) {
             
-            cart.map((product) => {
-                if(product.id === item.id){
-                    
-                    product.stock = cantidad
-                    setCart(cart)
-                }
-            })
+            setCart( cart.map((product) => {
+
+                return product.id === item.id
+
+                    ? {...product, cantidad:product.stock + cantidad}
+                    : product
+            }))
+           
             
         } else {
             setCart([...cart, { ...item, cantidad }]);
+            
         }
     }
 

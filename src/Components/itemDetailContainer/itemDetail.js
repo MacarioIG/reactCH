@@ -15,14 +15,17 @@ const ItemDetail = ({item}) => {
     
     const {imageDetail,title,price} = item
 
-    const  [quantity, setQuantity] = useState(0)
+    const  [cantidad, setCantidad] = useState(0)
+    
 
     const {addToCart} = useContext(CartContext) // llamo a la función con el hook useContext
     
     const onAdd = (cantidad) => { // recibe la cantidad seleccionada del itemCount como parametro
 
-        setQuantity(cantidad) // dicha cantidad es almacenada en quantity
+        setCantidad(cantidad) // dicha cantidad es almacenada en quantity
         addToCart(item,cantidad)
+
+        console.log(cantidad)
 
     }
     
@@ -34,8 +37,8 @@ const ItemDetail = ({item}) => {
                 <div className="">
                     <ul>{descArray}</ul>
                 </div> 
-                {  quantity === 0 ?
-                   <ItemCount stock={10} initial={1} price={price}onAdd={onAdd} /> : 
+                {  cantidad === 0 ?
+                   <ItemCount initial={1} stock = {10}price={price}onAdd={onAdd} /> : 
                    <Link to='/cart'>Go to cart!</Link>
                 }
             </div>
