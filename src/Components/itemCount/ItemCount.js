@@ -4,19 +4,13 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons"
 import './ItemCount.css'
 import { useState } from "react"
 
-
 const ItemCount = ({ stock, initial, onAdd, price}) => {
 
-
-
     const [contador, setContador] = useState(initial)
-
-
-
     const incrementar = () => {
 
         contador < stock ? setContador(contador + 1) : alert("No hay mas stock")
-
+        
     }
 
     const decrementar = () => {
@@ -24,7 +18,6 @@ const ItemCount = ({ stock, initial, onAdd, price}) => {
         contador > 1 && setContador(contador - 1)
 
     }
-
 
     return (
 
@@ -37,10 +30,7 @@ const ItemCount = ({ stock, initial, onAdd, price}) => {
             <span >TOTAL: ${contador*price}</span>
             <button className="counter__button" onClick={()=> onAdd(contador)} >Add to cart!</button>
         </div>
-
     )
-
-
 }
 
 export default ItemCount

@@ -1,12 +1,5 @@
-// crear contexto 
-
 import { createContext, useState,useEffect } from "react";
-/* import Cart from "../Components/cart/cart"; */
-
 export const CartContext = createContext()
-
-
-//se crea nuestro componete como capa de abstracción y llamamos a los childrens de App para poder renderizarlos nuevamente
 const Provider = (props) => {
 
     const [cart,setCart] = useState([])
@@ -35,8 +28,7 @@ const Provider = (props) => {
                     ? {...product, cantidad:product.stock + cantidad}
                     : product
             }))
-           
-            
+
         } else {
             setCart([...cart, { ...item, cantidad }]);
             
@@ -45,13 +37,9 @@ const Provider = (props) => {
 
     const isInCart = (id) => {
 
-        return cart.some( prod => prod.id === id) //Recorre el array hasta que sea true la condición
+        return cart.some( prod => prod.id === id) 
 
     }
-
-    //función para sumar la cantidad de un mismo producto
-
-    //funcion que elimine producto parti
 
      const deleteOne = (id) => {
 
@@ -60,19 +48,12 @@ const Provider = (props) => {
         
      }
 
-    //funcion que borre todos los items
-
     const deletAll = () => {
 
         setCart([])
 
     }
-    //funcion para calcular total de unidades
-
-    //funcion para calcular total de precio
-
-    
-
+   
     return (
             <CartContext.Provider value={{ cart, addToCart,deletAll,deleteOne,sum}}>{props.children}</CartContext.Provider>
     )

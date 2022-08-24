@@ -9,7 +9,6 @@ const ItemList = ({data}) => {
                 <Item item = {item} key={item.id}/>
 
             ))
-
     )
 }
 

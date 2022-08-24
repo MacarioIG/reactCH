@@ -5,15 +5,9 @@ import { Link } from 'react-router-dom'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-
-
 const Cart = () => {
-
-    
     
     const {cart ,deletAll,deleteOne,sum} = useContext(CartContext)
-
     
     if(cart.length === 0) {
 

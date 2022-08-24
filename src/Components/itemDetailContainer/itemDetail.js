@@ -7,12 +7,7 @@ import { CartContext } from "../../context/cartContext" //Llamo el contexto para
 const ItemDetail = ({item}) => {
  
     const descArray = item.description
-    
-  /*   const descMap = descArray.map((item) => (
-        <li>{item}</li>
-    )) */
-
-    
+      
     const {imageDetail,title,price} = item
 
     const  [cantidad, setCantidad] = useState(0)
@@ -25,8 +20,7 @@ const ItemDetail = ({item}) => {
         setCantidad(cantidad) // dicha cantidad es almacenada en quantity
         addToCart(item,cantidad)
 
-        console.log(cantidad)
-
+    
     }
     
     return (

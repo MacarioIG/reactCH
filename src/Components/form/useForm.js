@@ -3,11 +3,8 @@ import { collection, getFirestore,addDoc } from 'firebase/firestore'
 import { useContext } from 'react'
 import {CartContext} from '../../context/cartContext'
 import swal from 'sweetalert'
-import React from "react"
-import { Navigate } from "react-router-dom"
 
 export const useForm = (initialForm,validateForm) => {
-
 
     const [form, setForm] = useState(initialForm)
     const [errors,setErrors] = useState({})
@@ -26,10 +23,6 @@ export const useForm = (initialForm,validateForm) => {
 
     }
     
-    
-    
-    
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm({...form,[name]: value,});
@@ -77,5 +70,4 @@ export const useForm = (initialForm,validateForm) => {
         handleBlur,
         handleSubmit
     }
-
 }

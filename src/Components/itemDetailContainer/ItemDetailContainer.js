@@ -9,10 +9,7 @@ import Loader from '../Loader/Loader'
 const ItemDetailContainer = () => {
 
     const [loading,setLoading] = useState(true)
-
-
     const {id} = useParams();
-    
     const [item,setItems] = useState({})
 
     useEffect(() => {
@@ -32,7 +29,6 @@ const ItemDetailContainer = () => {
             <ItemDetail  item = {item}></ItemDetail>)}
         </div>
     )
-
 }
 
 export default ItemDetailContainer;

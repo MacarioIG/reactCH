@@ -13,13 +13,10 @@ const ItemListContainer = () => {
     const [items,setItems] = useState ([])
     const [loading,setLoading] = useState(true)
 
-    
-
     useEffect(() => {
 
        const querydb = getFirestore()
        const queryCollection = collection(querydb,'items')
-       
        if(category) {
            
            const queryFilter = query(queryCollection, where('category', '==', category))
@@ -33,16 +30,11 @@ const ItemListContainer = () => {
             .then(res => {setItems(res.docs.map(product => ( {id: product.id, ...product.data() })))
                           setLoading(false)})
 
-       }
-
-        
+       }        
     }, [category])
-    
-    
 
     return (
         <>  
-        
             <div className="itemsContainer">
                 {loading ? (<Loader/>) : (
                 <ItemList className="itemsContainer__items" data = {items}></ItemList>) }

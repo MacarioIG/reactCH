@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Button = ({icon}, {name}) => {
@@ -10,8 +9,6 @@ const Button = ({icon}, {name}) => {
             <p className='Nav__container__item__p'>${name}</p>
         </div>
     )
-
-
 }
 
 export default Button

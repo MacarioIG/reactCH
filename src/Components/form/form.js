@@ -47,8 +47,6 @@ const validationsForm = (form) => {
 
     }
 
-
-
     return errors
 
 }
@@ -73,22 +71,16 @@ const Form = () => {
                 <p>E-mail</p>
                 <input name="email"type="email" onChange = {handleChange} onBlur = {handleBlur} required value={form.email}/>
                 {errors.email && <p>{errors.email}</p>}
-
                 <p>Surname</p>
                 <input name="surname"type="text" onChange = {handleChange} onBlur = {handleBlur} required value={form.surname}/>
                 {errors.surname && <p>{errors.surname}</p>}
-
                 <p>Phone</p>
                 <input name="phone" type="number" onChange = {handleChange} onBlur = {handleBlur} required value={form.phone}/>
                 {errors.phone && <p>{errors.phone}</p>}
-
                 <input type="submit" value='Send and purchease!'/>
             </div>
         </form>
-
         </>
-        
-
     )
 
 }

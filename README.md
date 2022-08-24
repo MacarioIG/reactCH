@@ -9,7 +9,6 @@ This project was created for the final entry of the CoderHouse React course. You
     ![](https://github.com/MacarioIG/reactCH/blob/main/src/gif.gif)
     
 
-##
 
 ## Installed dependecies 
 

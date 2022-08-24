@@ -2,13 +2,7 @@ import './Navbar.css';
 import NavbarButton from '../navbarButton/navbarButton';
 import CartWidget from '../cartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
-
-//ICONS
 import { faCartShopping, faTv, faMobileScreenButton} from '@fortawesome/free-solid-svg-icons'
-
-
-
-
 
 function Navbar() {
 
