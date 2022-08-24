@@ -6,7 +6,8 @@ This project was created for the final entry of the CoderHouse React course. You
 
 ## DEMO
 
-    src/gif.gif
+    ![](https://github.com/MacarioIG/reactCH/blob/main/src/gif.gif)
+    
 
 ##
 
