@@ -6,7 +6,7 @@ This project was created for the final entry of the CoderHouse React course. You
 
 ## DEMO
 
-    ![](src/gif.gif)
+    src/gif.gif
 
 ##
 
